@@ -44,7 +44,7 @@ export default function Database() {
                           src={img.url}
                           alt={img.name}
                           className="w-full h-[12rem] object-cover"/>
-                            <p className="text-white text-2xl font-semibold">{img.name
+                            <p className="text-black py-1 px-2 text-center">{img.name
                             .replace(/\d{2,4}x\d{2,4}\s*cm?/gi, '')
                             .replace(/\(\d+\)/g, '')
                             .replace(/\.(jpg|jpeg|png)$/i, '')
@@ -77,29 +77,30 @@ export default function Database() {
       </div>
 
       {selectedImage && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[url('/forside.jpg')] bg-opacity-30 z-50">
-          <div className="absolute top-0 left-0 w-full flex justify-between items-center bg-black bg-opacity-70">
-            <button
-              className="text-white text-lg px-4 py-2"
-              onClick={() => setSelectedImage(null)}>← Tilbake
-            </button>
-            <p className="text-white text-2xl font-semibold">{selectedImage.name
-              .replace(/\d{2,4}x\d{2,4}\s*cm?/gi, '')
-              .replace(/\(\d+\)/g, '')
-              .replace(/\.(jpg|jpeg|png)$/i, '')
-              .replace(/\s+$/, '')
-              .trim()}
-            </p>  
-            <div className="w-16"></div>  
-          </div>
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center bg-black bg-opacity-90">
+      <button
+        className="text-white text-lg px-4 py-2"
+        onClick={() => setSelectedImage(null)}>← Tilbake
+      </button>
+      <p className="text-white text-2xl font-semibold">{selectedImage.name
+        .replace(/\d{2,4}x\d{2,4}\s*cm?/gi, '')
+        .replace(/\(\d+\)/g, '')
+        .replace(/\.(jpg|jpeg|png)$/i, '')
+        .replace(/\s+$/, '')
+        .trim()}
+      </p>  
+      <div className="w-16"></div>  
+    </div>
 
-          <img
-            src={selectedImage.url}
-            alt={selectedImage.name}
-            className="w-auto h-auto max-w-full max-h-full object-contain"
-          />
-        </div>
-      )}
+    <img
+      src={selectedImage.url}
+      alt={selectedImage.name}
+      className="w-auto h-auto max-w-full max-h-full object-contain"
+    />
+  </div>
+)}
+
 
     </main>
   );
