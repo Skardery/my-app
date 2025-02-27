@@ -33,7 +33,7 @@ export default function Database() {
                     </h2>
                   </div>
 
-                  <div className="grid grid-cols-5 gap-4">
+                  <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-4">
                     {filteredImages.map((img, index) => (
                       <div
                         key={index}
