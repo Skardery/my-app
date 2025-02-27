@@ -70,8 +70,8 @@ export default function Database() {
       </div>
 
       {selectedImage && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
-          <div className="absolute top-0 left-0 w-full flex justify-between items-center">
+        <div className="fixed inset-0 flex items-center justify-center bg-[url('/forside.jpg')] bg-opacity-30 z-50">
+          <div className="absolute top-0 left-0 w-full flex justify-between items-center bg-black bg-opacity-70">
             <button
               className="text-white text-lg px-4 py-2"
               onClick={() => setSelectedImage(null)}>← Tilbake
