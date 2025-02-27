@@ -44,6 +44,13 @@ export default function Database() {
                           src={img.url}
                           alt={img.name}
                           className="w-full h-[12rem] object-cover"/>
+                            <p className="text-white text-2xl font-semibold">{img.name
+                            .replace(/\d{2,4}x\d{2,4}\s*cm?/gi, '')
+                            .replace(/\(\d+\)/g, '')
+                            .replace(/\.(jpg|jpeg|png)$/i, '')
+                            .replace(/\s+$/, '')
+                            .trim()}
+                            </p> 
                       </div>
                     ))}
                   </div>
