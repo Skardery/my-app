@@ -33,7 +33,7 @@ export default function Database() {
                     </h2>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     {filteredImages.map((img, index) => (
                       <div
                         key={index}
@@ -44,7 +44,7 @@ export default function Database() {
                           src={img.url}
                           alt={img.name}
                           className="w-full h-[12rem] object-cover"/>
-                            <p className="text-black py-1 px-2 text-center">{img.name
+                            <p className="text-black text-sm py-1 px-2 text-center">{img.name
                             .replace(/\d{2,4}x\d{2,4}\s*cm?/gi, '')
                             .replace(/\(\d+\)/g, '')
                             .replace(/\.(jpg|jpeg|png)$/i, '')
