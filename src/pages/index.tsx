@@ -20,12 +20,12 @@ export default function Main() {
           <div className="mt-4 flex">
             <Link href="https://www.facebook.com/">
               <div className="flex items-center">
-                <img src="/facebook.webp" width="40" height="40" alt="" /><p className="ml-2 font-bold">Facebook</p>
+                <img src="/Facebook.webp" width="40" height="40" alt="" /><p className="ml-2 font-bold">Facebook</p>
               </div>
             </Link>
             <Link href="https://www.instagram.com/">
               <div className="flex items-center ml-10">
-                <img src="/instagram.webp" width="40" height="40" alt="" /><p className="ml-2 font-bold">Instagram</p>
+                <img src="/Instagram.webp" width="40" height="40" alt="" /><p className="ml-2 font-bold">Instagram</p>
               </div>
             </Link>
           </div>
